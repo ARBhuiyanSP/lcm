@@ -30,7 +30,7 @@ $bank = $row['bank'];
 			<div class="col-md-12">
 				<div class="card">
 				  <div class="card-header">
-					<h3 class="card-title">LC Print View - [Industrial]</h3>
+					<h3 class="card-title">LC Print View - [Industrial] <button type="button" class="btn btn-info btn-xs" onclick="window.location.href='lc_industrial_list.php';"><i class="nav-icon fas fa-bars"></i> Back To LC List</button></h3>
 				  </div>
 				  <!-- /.card-header -->
 				  <div class="card-body">
@@ -40,10 +40,14 @@ $bank = $row['bank'];
 						{ 
 							include('lc_layout/industrial_dhaka_bank_1.php');
 							include('lc_layout/industrial_dhaka_bank_2.php');
-						}else if($bank == 'UCB Bank'){
+						}
+						else if($bank == 'UCB Bank')
+						{
 							include('lc_layout/industrial_ucb_bank_1.php');
 							include('lc_layout/industrial_ucb_bank_2.php');
-						}else{
+						}
+						else
+						{
 							echo 'Something Error ! Layout May Not Found...!';
 						} 
 					?>

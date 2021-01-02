@@ -11,6 +11,8 @@
 	  background-size: 8.5in 14in;
 	  width: 8.5in;
 	  height: 14in;
+	  left:0px;
+	  top:0px;
 	}
 	
 	.commonDataStyle{
@@ -21,64 +23,64 @@
 	}
 	
 	#printnameAddress{
-		top:225px;
-		left:310px;
+		top:200px;
+		left:294px;
 		width: 400px;	
 	}
 	#printirc{
-		top:253px;
-		left:168px;
+		top:230px;
+		left:145px;
 		width: 200px;	
 	}
 	
 	#printyearOfrenew{
-		top:252px;
+		top:230px;
 		left:510px;
 		width: 200px;	
 	}
 	#printSofCash{
 		top:363px;
-		left:230px;
+		left:205px;
 		width: 200px;	
 	}
 	
 	#printSofBarter{
 		top:363px;
-		left:265px;
+		left:240px;
 		width: 200px;	
 	}
 	#printSofLoan{
 		top:363px;
-		left:295px;
+		left:270px;
 		width: 200px;	
 	}
 	#printSofCredit{
 		top:363px;
-		left:325px;
+		left:305px;
 		width: 200px;	
 	}
 	#printSofOther{
 		top:363px;
-		left:355px;
+		left:335px;
 		width: 200px;	
 	}
 	#printLcAmount{
-		top:472px;
-		left:350px;
+		top:475px;
+		left:325px;
 		width: 200px;	
 	}
 	#printLcAmountinWords{
-		top:497px;
-		left:220px;
+		top:505px;
+		left:210px;
 		width: 450px;	
 	}
 	#printDesItemsImport{
-		top:608px;
-		left:130px;
+		top:625px;
+		left:105px;
 		width: 220px;	
 	}
 	#printrestRictedItems{
-		top:608px;
+		top:625px;
 		left:425px;
 		width: 220px;	
 	}
@@ -146,9 +148,11 @@
 		<div class="commonDataStyle" id="printrestRictedItems"><?php echo $row['restricted_items'];?></div>
 		<?php } ?>
 	</div>
-</div> 
-<button class="btn btn-default" onclick="namebadge_printing('printSectionArea')" style="float:right;"><i class="fa fa-print" aria-hidden="true" style="font-size: 17px;"> Print</i></button>
-
+</div>
+<center style="padding-bottom:5px;">
+<button type="button" class="btn btn-info" onclick="window.location.href='lc_industrial_list.php';"><i class="nav-icon fas fa-bars"></i> Back To LC List</button> 
+<button class="btn btn-success" onclick="namebadge_printing('printSectionArea')" style=""><i class="fa fa-print" aria-hidden="true" style="font-size: 17px;"> Print Page-1</i></button>
+</center>
 <script>
 	var mywindow;
         function namebadge_printing(divName, hideDirSec=false){

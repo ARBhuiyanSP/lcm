@@ -68,51 +68,17 @@
           </li>
 		  
           <li class="nav-header">USER OPTION</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+		  <li class="nav-item">
+            <a href="lc_industrial_list.php" class="nav-link">
               <i class="nav-icon fas fa-copy" style="color: #17A2B8;"></i>
-              <p>
-                LC - Industrial
-                <i class="fas fa-angle-left right" style="color: #17A2B8;"></i>
-              </p>
+              <p>LC - Industrial</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="lc_industrial.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>LC Entry</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="lc_industrial_list.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>LC List</p>
-                </a>
-              </li>
-            </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+		  <li class="nav-item">
+            <a href="lc_commercial_list.php" class="nav-link">
               <i class="nav-icon fas fa-copy" style="color: #17A2B8;"></i>
-              <p>
-                LC - Commercial
-                <i class="fas fa-angle-left right" style="color: #17A2B8;"></i>
-              </p>
+              <p>LC - Commercial</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="lc_commercial.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>LC Entry</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="lc_commercial_list.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>LC List</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-header">REPORTS</li>
           <li class="nav-item">

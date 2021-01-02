@@ -43,13 +43,12 @@
                 <table id="example1" class="table table-bordered table-striped">
 					<thead>
 						<tr>
-							<th width="10%">SL No</th>
 							<th width="10%">LCAF No</th>
 							<th width="15%">Importer Name</th>
 							<th width="15%">IRC No</th>
 							<th width="10%">LC Amount</th>
-							<th width="30%">Items</th>
-							<th width="10%" class="TAC">Actions</th>
+							<th>Items</th>
+							<th width="12%" class="TAC">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -59,7 +58,6 @@
 							foreach ($item_details as $item) {
 						?>
 						<tr>
-							<td><?php echo $item['sl_no']; ?></td>
 							<td><?php echo $item['lcaf_no']; ?></td>
 							<td><?php echo $item['importer_name']; ?></td>
 							<td><?php echo $item['irc_no']; ?></td>
@@ -76,13 +74,12 @@
 					</tbody>
 					<tfoot>
 						<tr>
-							<th width="5%">SL No</th>
 							<th width="10%">LCAF No</th>
 							<th width="15%">Importer Name</th>
 							<th width="15%">IRC No</th>
 							<th width="10%">LC Amount</th>
-							<th width="30%">Items</th>
-							<th width="15%" class="TAC">Actions</th>
+							<th>Items</th>
+							<th width="12%" class="TAC">Actions</th>
 						</tr>
                   </tfoot>
                 </table>

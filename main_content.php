@@ -26,7 +26,13 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Total Amounts of LC-[Commercial]</span>
-                <span class="info-box-number"> 10
+                <span class="info-box-number">
+					<?php
+						$sqlindamount = "SELECT SUM(`lc_amount`) AS totalamount FROM `lc_commercial`";
+						$resultindamount = mysqli_query($conn, $sqlindamount);
+						$rowindamount = mysqli_fetch_object($resultindamount) ;
+						echo '$ '. $rowindamount->totalamount;
+					?>
                   <button class="btn btn-info" onclick="window.location.href='lc_commercial_list.php'">View Details</button>
                 </span>
               </div>
@@ -41,7 +47,13 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Total Amounts of LC-[Industrial]</span>
-                <span class="info-box-number"> 10
+                <span class="info-box-number"> 
+					<?php
+						$sqlcomamount = "SELECT SUM(`lc_amount`) AS totalcomamount FROM `lc_industrial`";
+						$resultcomamount = mysqli_query($conn, $sqlcomamount);
+						$rowcomamount = mysqli_fetch_object($resultcomamount) ;
+						echo '$ '. $rowcomamount->totalcomamount;
+					?>
                   <button class="btn btn-success" onclick="window.location.href='lc_industrial_list.php'">View Details</button>
                 </span>
               </div>

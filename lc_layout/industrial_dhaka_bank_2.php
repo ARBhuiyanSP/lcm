@@ -7,7 +7,6 @@
 	
 	#printDataContainer2{
 	  position:relative;
-	  border:1px solid blue;
 	  background-image: url("img/backgrounds/lc-db-02.jpg");
 	  background-size: 8.5in 14in;
 	  width: 8.5in;
@@ -17,127 +16,127 @@
 	.commonDataStyle{
 		position:absolute;
 		height:18px;
-		font-size:12px;
+		font-size:14px;
 		font-weight:bold;
 	}
 	
 	#printBeneficiaryName{
-		top:328px;
+		top:415px;
 		left:225px;
 		width: 450px;	
 	}
 	#printBeneficiaryAddress{
-		top:346px;
+		top:433px;
 		left:225px;
 		width: 450px;	
 	}
 	#printOpenersName{
-		top:404px;
+		top:510px;
 		left:225px;
 		width: 450px;	
 	}
 	#printOpenersAddress{
-		top:424px;
+		top:530px;
 		left:225px;
 		width: 450px;	
 	}
 	#printDraftAmount{
-		top:489px;
-		left:48px;
+		top:625px;
+		left:35px;
 	}
 	#printDraftAmountinWords{
-		top:488px;
-		left:188px;
+		top:625px;
+		left:200px;
 		width: 198px;
 	}
 	#printAtSight{
-		top:464px;
-		left:390px;
+		top:605px;
+		left:470px;
 	}
 	#printDaysDaDp{
-		top:493px;
-		left:390px;
+		top:640px;
+		left:470px;
 	}
 	#printCif{
-		top:465px;
-		left:548px;
+		top:605px;
+		left:685px;
 	}
 	#printFob{
-		top:465px;
-		left:603px;
+		top:605px;
+		left:755px;
 	}
 	#printCfr{
-		top:493px;
-		left:548px;
+		top:640px;
+		left:685px;
 	}
 	#printDrawnOnUs{
-		top:472px;
-		left:681px;
+		top:615px;
+		left:860px;
 	}
 	#printDrawnOnThem{
-		top:494px;
-		left:680px;
+		top:640px;
+		left:860px;
 	}
 	#printCountryOrigin{
-		top:531px;
+		top:720px;
 		left:682px;
 	}
 	
 	#printCommodities{
-		top:538px;
+		top:700px;
 		left:57px;
 		width: 490px;
 	}
 	
 	#printLcafNo{
-		top:745px;
-		left:563px;
+		top:975px;
+		left:695px;
 	}
 	#printIrcNo{
-		top:803px;
-		left:564px;
+		top:1055px;
+		left:695px;
 	}
 	#printShipmentFrom{
-		top:919px;
-		left:125px;
+		top:1210px;
+		left:100px;
 	}
 	#printShipmentTo{
-		top:919px;
-		left:365px;
+		top:1210px;
+		left:410px;
 	}
 	#printInsPartShipment{
-		top:1035px;
-		left:50px;
+		top:1365px;
+		left:20px;
 	}
 	#printInsAllowed{
-		top:1035px;
-		left:162px;
+		top:1365px;
+		left:165px;
 	}
 	#printInsProhibited{
-		top:1035px;
-		left:272px;
+		top:1365px;
+		left:308px;
 	}
 	#printLastShipmentDate{
-		top:1074px;
+		top:1410px;
 		left:200px;
 	}
 	
 	
 	#printInsCoPartShipment{
-		top:1033px;
-		left:402px;
+		top:1365px;
+		left:485px;
 	}
 	#printInsCoAllowed{
-		top:1033px;
-		left:545px;
+		top:1365px;
+		left:670px;
 	}
 	#printInsCoProhibited{
-		top:1033px;
-		left:640px;
+		top:1365px;
+		left:795px;
 	}
 	#printLastNegDate{
-		top:1074px;
-		left:550px;
+		top:1410px;
+		left:670px;
 	}
 	
 	
@@ -281,8 +280,12 @@
 		<?php } ?>
 		
 	</div>
-</div> 
-<button class="btn btn-default" onclick="printDiv2('printSectionArea2')" style="float:right;"><i class="fa fa-print" aria-hidden="true" style="font-size: 17px;"> Print</i></button>
+</div>
+<center style="padding-bottom:5px;">
+<button type="button" class="btn btn-info" onclick="window.location.href='lc_industrial_list.php';"><i class="nav-icon fas fa-bars"></i> Back To LC List</button> 
+<button class="btn btn-success" onclick="printDiv2('printSectionArea2')" style=""><i class="fa fa-print" aria-hidden="true" style="font-size: 17px;"> Print Page-2</i></button>
+</center> 
+
 
 <script>
 	function printDiv2(divName) {

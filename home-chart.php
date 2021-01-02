@@ -2,22 +2,14 @@
 <script src="js/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-<style>
-.table td, .table th {
-	padding:5px;
-}
-</style>
 <div class="card">
-  <div class="card-header">
-	<h3 class="card-title">Monthly Total LC Amount in Chart</h3>
-  </div>
   <!-- /.card-header -->
   <div class="card-body">
 	<!-- we are adding the accordion ID so Bootstrap's collapse plugin detects it -->
 	 <figure class="highcharts-figure">
     <div id="container"></div>
     <p class="highcharts-description"> </p>
-    <table class="table table-bordered table-striped" id="datatable">
+    <table class="table table-bordered table-striped" id="datatable" style="display:none;">
         <thead>
             <tr>
                 <th></th>
@@ -34,7 +26,7 @@
             <tr>
                 <th>February</th>
                 <td>2</td>
-                <td>0</td>
+                <td>8</td>
             </tr>
             <tr>
                 <th>March</th>
@@ -94,9 +86,7 @@
   </div>
   <!-- /.card-body -->
 </div>
-<!-- /.card -->
-			
-			
+<!-- /.card -->			
 <SCRIPT>
 Highcharts.chart('container', {
     data: {
