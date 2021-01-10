@@ -7,7 +7,7 @@
 	
 	#printDataContainer{
 	  position:relative;
-	  background-image: url("img/backgrounds/ucb-ind-01.jpg");
+	  background-image: url("img/backgrounds/lc-ob-ind-01.jpg");
 	  background-size: 8.5in 14in;
 	  width: 8.5in;
 	  height: 14in;
@@ -18,71 +18,71 @@
 	.commonDataStyle{
 		position:absolute;
 		height:18px;
-		font-size:12px;
+		font-size:14px;
 		font-weight:bold;
 	}
 	
 	#printnameAddress{
 		top:185px;
-		left:335px;
-		width: 390px;	
+		left:294px;
+		width: 400px;	
 	}
 	#printirc{
-		top:210px;
-		left:155px;
+		top:220px;
+		left:220px;
 		width: 200px;	
 	}
 	
 	#printyearOfrenew{
-		top:210px;
-		left:545px;
+		top:220px;
+		left:565px;
 		width: 200px;	
 	}
 	#printSofCash{
-		top:320px;
-		left:238px;
+		top:298px;
+		left:225px;
 		width: 200px;	
 	}
 	
 	#printSofBarter{
-		top:320px;
-		left:265px;
+		top:298px;
+		left:260px;
 		width: 200px;	
 	}
 	#printSofLoan{
-		top:320px;
-		left:305px;
+		top:298px;
+		left:300px;
 		width: 200px;	
 	}
 	#printSofCredit{
-		top:320px;
-		left:340px;
+		top:298px;
+		left:335px;
 		width: 200px;	
 	}
 	#printSofOther{
-		top:320px;
-		left:375px;
+		top:298px;
+		left:365px;
 		width: 200px;	
 	}
 	#printLcAmount{
-		top:420px;
-		left:350px;
+		top:370px;
+		left:335px;
 		width: 200px;	
 	}
 	#printLcAmountinWords{
-		top:440px;
-		left:240px;
+		top:385px;
+		left:210px;
 		width: 450px;	
 	}
 	#printDesItemsImport{
-		top:580px;
-		left:105px;
-		width: 260px;	
+		top:515px;
+		left:85px;
+		width: 300px;	
 	}
 	#printrestRictedItems{
-		top:580px;
-		left:450px;
-		width: 260px;	
+		top:515px;
+		left:470px;
+		width: 300px;	
 	}
 }
 </style>

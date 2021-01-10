@@ -7,6 +7,18 @@
 .table td{
 	padding:3px 5px 3px 12px;
 }
+.dbclr{
+	background-color:#f0c80d;
+	color:#000000;
+}
+.ucbclr{
+	background-color:#db0a3b;
+	color:#ffffff;
+}
+.oneclr{
+	background-color: #acad75;
+	color:#ffffff;
+}
 </style>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -37,6 +49,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">List of LC - [Commercial]</h3>
+				<button type="button" class="btn btn-info btn-xs" onclick="window.location.href='lc_commercial.php';"><i class="nav-icon fas fa-plus"></i> New Entry</button>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -47,6 +60,7 @@
 							<th width="15%">Importer Name</th>
 							<th width="15%">IRC No</th>
 							<th width="10%">LC Amount</th>
+							<th width="10%">Bank</th>
 							<th>Items</th>
 							<th width="12%" class="TAC">Actions</th>
 						</tr>
@@ -56,13 +70,27 @@
 						$item_details = getTableDataByTableName('lc_commercial', '', 'id');
 						if (isset($item_details) && !empty($item_details)) {
 							foreach ($item_details as $item) {
-						?>
+						
+						
+								if($item['bank'] == 'Dhaka Bank')
+								{ 
+									$bankclr = 'dbclr';
+								}else if($item['bank'] == 'UCB Bank'){
+									$bankclr = 'ucbclr';
+								}else if($item['bank'] == 'One Bank'){
+									$bankclr = 'oneclr';
+								}else{
+									$bankclr = '';
+								} 
+							?>
 						<tr>
-							<td><?php echo $item['lcaf_no']; ?></td>
-							<td><?php echo $item['importer_name']; ?></td>
-							<td><?php echo $item['irc_no']; ?></td>
-							<td><?php echo $item['lc_amount']; ?></td>
-							<td><?php echo $item['description_of_item_imported']; ?></td>
+							<td class="<?php echo $bankclr; ?>"><?php echo $item['lcaf_no']; ?></td>
+							<td class="<?php echo $bankclr; ?>"><?php echo $item['importer_name']; ?></td>
+							<td class="<?php echo $bankclr; ?>"><?php echo $item['irc_no']; ?></td>
+							<td class="<?php echo $bankclr; ?>"><?php echo $item['lc_amount']; ?></td>
+							
+							<td class="<?php echo $bankclr; ?>"><?php echo $item['bank']; ?></td>
+							<td class="<?php echo $bankclr; ?>"><?php echo $item['description_of_item_imported']; ?></td>
 							<td class="TAC">
 								<a href="lc_industrial_view.php?no=<?php echo $item['sl_no']; ?>" title="View" class="icon-button btn btn-success" style="padding:3px;"><i class="fas fa-eye"></i></a> 
 								<a href="lc_commercial_print.php?no=<?php echo $item['sl_no']; ?>" title="Bank Print" class="icon-button btn btn-primary" style="padding:3px;"><i class="fas fa-print"></i></a> 
@@ -78,6 +106,7 @@
 							<th width="15%">Importer Name</th>
 							<th width="15%">IRC No</th>
 							<th width="10%">LC Amount</th>
+							<th width="10%">Bank</th>
 							<th>Items</th>
 							<th width="12%" class="TAC">Actions</th>
 						</tr>

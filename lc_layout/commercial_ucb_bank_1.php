@@ -7,7 +7,7 @@
 	
 	#printDataContainer{
 	  position:relative;
-	  background-image: url("img/backgrounds/ucb-ind-01.jpg");
+	  background-image: url("img/backgrounds/ucb-com-01.jpg");
 	  background-size: 8.5in 14in;
 	  width: 8.5in;
 	  height: 14in;
@@ -23,74 +23,77 @@
 	}
 	
 	#printnameAddress{
-		top:185px;
-		left:335px;
-		width: 390px;	
+		top:200px;
+		left:300px;	
 	}
 	#printirc{
-		top:210px;
-		left:155px;
-		width: 200px;	
+		top:240px;
+		left:170px;	
 	}
 	
 	#printyearOfrenew{
-		top:210px;
-		left:545px;
-		width: 200px;	
+		top:240px;
+		left:460px;	
 	}
 	#printSofCash{
-		top:320px;
-		left:238px;
+		top:330px;
+		left:210px;
 		width: 200px;	
 	}
 	
 	#printSofBarter{
-		top:320px;
-		left:265px;
+		top:330px;
+		left:245px;
 		width: 200px;	
 	}
 	#printSofLoan{
-		top:320px;
-		left:305px;
+		top:330px;
+		left:285px;
 		width: 200px;	
 	}
 	#printSofCredit{
-		top:320px;
-		left:340px;
+		top:330px;
+		left:325px;
 		width: 200px;	
 	}
 	#printSofOther{
-		top:320px;
-		left:375px;
+		top:330px;
+		left:360px;
 		width: 200px;	
 	}
 	#printLcAmount{
-		top:420px;
-		left:350px;
-		width: 200px;	
+		top:303px;
+		left:385px;	
 	}
 	#printLcAmountinWords{
-		top:440px;
-		left:240px;
-		width: 450px;	
+		top:320px;
+		left:210px;	
 	}
 	#printDesItemsImport{
-		top:580px;
-		left:105px;
-		width: 260px;	
+		top:515px;
+		left:100px;	
 	}
-	#printrestRictedItems{
-		top:580px;
-		left:450px;
-		width: 260px;	
+	#itcNumber{
+		top:515px;
+		left:515px;	
+	}
+	#descriptionOfItems{
+		top:765px;
+		left:100px;	
+	}
+	
+	#itcNo{
+		top:765px;
+		left:515px;
+		width: 220px;	
 	}
 }
 </style>
 
 	<div id='printDataContainer'>
 		<!-- Print Name & Address -->
-		<?php if(isset($row['applicant_name']) && !empty($row['applicant_name'])){ ?>
-		<div class="commonDataStyle" id="printnameAddress"> <?php echo $row['applicant_name'].''.$row['applicant_address']; ?></div>
+		<?php if(isset($row['importer_name']) && !empty($row['importer_name'])){ ?>
+		<div class="commonDataStyle" id="printnameAddress"> <?php echo $row['importer_name'].','.$row['address']; ?></div>
 		<?php } ?>
 		
 		<!-- Print IRC No -->
@@ -103,7 +106,7 @@
 		<div class="commonDataStyle" id="printyearOfrenew"> <?php echo $row['year_of_renewal']; ?></div>
 		<?php } ?>
 		
-		<!-- Print Renewal year -->
+		<!-- Print Source of  -->
 		<?php if(isset($row['sof_cash']) && !empty($row['sof_cash'])){ ?>
 		<div class="commonDataStyle" id="printSofCash"> <img src="img/checkmark.png" height="15px" /></div>
 		<?php } ?>
@@ -142,10 +145,18 @@
 		<?php if(isset($row['description_of_item_imported']) && !empty($row['description_of_item_imported'])){ ?>
 		<div class="commonDataStyle" id="printDesItemsImport"><?php echo $row['description_of_item_imported'];?></div>
 		<?php } ?>
+		<!-- Print Description items to be imported/ ITC No -->
+		<?php if(isset($row['hs_code']) && !empty($row['hs_code'])){ ?>
+		<div class="commonDataStyle" id="itcNumber"><?php echo $row['hs_code'];?></div>
+		<?php } ?>
 		
 		<!-- Print Description items to be imported -->
-		<?php if(isset($row['restricted_items']) && !empty($row['restricted_items'])){ ?>
-		<div class="commonDataStyle" id="printrestRictedItems"><?php echo $row['restricted_items'];?></div>
+		<?php if(isset($row['description_of_items']) && !empty($row['description_of_items'])){ ?>
+		<div class="commonDataStyle" id="descriptionOfItems"><?php echo $row['description_of_items'];?></div>
+		<?php } ?>
+		<!-- Print Description items to be imported/ITC No -->
+		<?php if(isset($row['hs_code']) && !empty($row['hs_code'])){ ?>
+		<div class="commonDataStyle" id="itcNo"><?php echo $row['hs_code'];?></div>
 		<?php } ?>
 	</div>
 </div>

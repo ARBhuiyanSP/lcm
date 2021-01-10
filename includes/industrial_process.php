@@ -80,7 +80,7 @@
 				$conn->query($query);
 				
 				$_SESSION['success']    =   "LC insert process have been successfully completed.";
-				header("location: lc_industrial.php");
+				header("location: lc_industrial_list.php");
 				exit();
 				}
 		

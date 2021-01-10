@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"><img src="images/logo.png" height="50px"/> Inventory Management System</h1>
+            <h5 class="m-0"><img src="images/logo.png" height="25px"/> LC Management System</h5>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -45,6 +45,16 @@ $bank = $row['bank'];
 						{
 							include('lc_layout/industrial_ucb_bank_1.php');
 							include('lc_layout/industrial_ucb_bank_2.php');
+						}
+						else if($bank == 'National Bank Limited')
+						{
+							include('lc_layout/industrial_nbl_bank_1.php');
+							include('lc_layout/industrial_nbl_bank_2.php');
+						}
+						else if($bank == 'One Bank')
+						{
+							include('lc_layout/industrial_one_bank_1.php');
+							include('lc_layout/industrial_one_bank_2.php');
 						}
 						else
 						{

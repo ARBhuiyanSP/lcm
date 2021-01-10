@@ -46,18 +46,15 @@
 
 	
 }
-/* .table td, .table th{
-	padding:10px;
-} */
 </style>
 
 	<div id='printDataContainer2'>
 		<div class="row">
 			<div class="col-sm-6">
-				<img src="img/dhakabank.png" />
-				<p>___________________________________________</p>
-				<p>___________________________________________</p>
-				<p>___________________________________________</p>
+				<h2>United Commercial Bank Ltd</h2>
+				<p>____________________________</p>
+				<p>____________________________</p>
+				<p>____________________________</p>
 			</div>
 			<div class="col-sm-6">
 				<div class="row">
@@ -66,7 +63,7 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-2"></div>
-					<div class="col-sm-10"><p class="ucbLCBox">L/C No. </p></div>
+					<div class="col-sm-10"><p class="ucbLCBox">L/C No.</p></div>
 				</div>
 				<div class="row">
 					<div class="col-sm-8"></div>
@@ -204,7 +201,7 @@
 						</td>
 						<td colspan="3">
 							<p>(Name and address of Insurence Company)</p>
-							<span><?php echo $row['name_of_ins']; ?>, <?php echo $row['ins_address']; ?></span></br>
+							<span><?php echo $row['name_of_ins']; ?>, <?php echo $row['ins_address']; ?></span>
 						</td>
                     </tr>
                     <tr>

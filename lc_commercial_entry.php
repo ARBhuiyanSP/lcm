@@ -43,6 +43,7 @@ label{
 				<div class="card">
 					<div class="card-header">
 						<h3 class="card-title">LC Commercial Data Entry</h3>
+						<button type="button" class="btn btn-info btn-xs" onclick="window.location.href='lc_commercial_list.php';"><i class="nav-icon fas fa-bars"></i> LC List</button>
 					</div>
 					<form id="" method="POST" action="#">
 					<!-- /.card-header -->
