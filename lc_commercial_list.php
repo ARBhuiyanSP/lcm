@@ -19,6 +19,10 @@
 	background-color: #acad75;
 	color:#ffffff;
 }
+.nccclr{
+	background-color: #17A2B8;
+	color:#ffffff;
+}
 </style>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -79,6 +83,8 @@
 									$bankclr = 'ucbclr';
 								}else if($item['bank'] == 'One Bank'){
 									$bankclr = 'oneclr';
+								}else if($item['bank'] == 'NCC Bank'){
+									$bankclr = 'nccclr';
 								}else{
 									$bankclr = '';
 								} 

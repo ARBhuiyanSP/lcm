@@ -46,6 +46,9 @@ $bank = $row['bank'];
 						}else if($bank == 'One Bank'){
 							include('lc_layout/commercial_one_bank_1.php');
 							include('lc_layout/commercial_one_bank_2.php');
+						}else if($bank == 'NCC Bank'){
+							include('lc_layout/commercial_ncc_bank_1.php');
+							include('lc_layout/commercial_ncc_bank_2.php');
 						}else{
 							echo 'Something Error ! Layout May Not Found...!';
 						} 

@@ -18,37 +18,37 @@
 	.commonDataStyle{
 		position:absolute;
 		height:18px;
-		font-size:12px;
+		font-size:14px;
 		font-weight:bold;
 	}
 	
 	#printnameAddress{
-		top:200px;
+		top:205px;
 		left:300px;	
 	}
 	#printirc{
-		top:240px;
+		top:245px;
 		left:170px;	
 	}
 	
 	#printyearOfrenew{
-		top:240px;
+		top:245px;
 		left:460px;	
 	}
 	#printSofCash{
 		top:330px;
-		left:210px;
+		left:220px;
 		width: 200px;	
 	}
 	
 	#printSofBarter{
 		top:330px;
-		left:245px;
+		left:255px;
 		width: 200px;	
 	}
 	#printSofLoan{
 		top:330px;
-		left:285px;
+		left:295px;
 		width: 200px;	
 	}
 	#printSofCredit{
@@ -62,7 +62,7 @@
 		width: 200px;	
 	}
 	#printLcAmount{
-		top:303px;
+		top:305px;
 		left:385px;	
 	}
 	#printLcAmountinWords{
@@ -78,12 +78,12 @@
 		left:515px;	
 	}
 	#descriptionOfItems{
-		top:765px;
+		top:755px;
 		left:100px;	
 	}
 	
 	#itcNo{
-		top:765px;
+		top:755px;
 		left:515px;
 		width: 220px;	
 	}
