@@ -84,7 +84,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<p>Plese open confirmed irrevocable letter of credit through your correspondent by <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> MaillAirmail <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Teletransmission in full  <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span>  Teletransmission in brief details of which are as follows :  <span class="checkBox"></p>
+				<p>Plese open confirmed irrevocable letter of credit through your correspondent by <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> MaillAirmail <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Teletransmission in full  <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span>  Teletransmission in brief details of which are as follows : </p>
 			</div>
 		</div>
 		<div class="row">
@@ -192,7 +192,7 @@
                     <tr>
 						<td colspan="5"><p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Other documents : </br><small style="padding-left:400px;">(if special documents are required please specify name of issuer)</small></p>
 						<p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Full set of clean on board bills of lading <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Airway Bill <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Post parcel <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Relating to shipment  </p>
-						<p style="width:600px;"> from <span style="text-decoration:underline;font-size:18px;padding:0px 20px 0px 20px;"><?php echo $row['shipment_from']; ?></span>to<span style="text-decoration:underline;font-size:18px;padding:0px 20px 0px 20px;"><?php echo $row['shipment_to']; ?></span>drawn</br><span style="padding-left:100px;">(in each case please certify port of country only)</span></p>
+						<p style=""> from <span style="display: inline-block;padding: 0px 100px 0px 100px;border-bottom: 1px solid #888;font-size:18px;"><?php echo $row['shipment_from']; ?></span>to<span style="display: inline-block;padding: 0px 100px 0px 100px;border-bottom: 1px solid #888;font-size:18px;"><?php echo $row['shipment_to']; ?></span>drawn</br><span style="padding-left:200px;">(in each case please certify port of country only)</span></p>
 					
 							<span style="width:600px;">to the order of Dhaka Bank Limited</span>
 							<span style="padding-left:450px;width:600px;">Marked notify above account party</span>
