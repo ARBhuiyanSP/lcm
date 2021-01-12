@@ -43,8 +43,12 @@
 	.table-bordered td, .table-bordered th {
 		border: 1px solid #000;
 	}
-	.fonSize{
-		font-size:14px;
+	.fontSize18{
+		font-size:18px;
+		font-weight:bold;
+	}
+	.fontSize16{
+		font-size:18px;
 	}
 
 	
@@ -94,20 +98,20 @@
                     <tr>
 						<td colspan="5">
 							<span>Beneficiary's Name & Address : </span>
-							<span class="fonSize"><?php echo $row['beneficiary_name']; ?></span></br>
-							<span class="fonSize"><?php echo $row['beneficiary_address']; ?></span>
+							<span class="fontSize18"><?php echo $row['beneficiary_name']; ?></span></br>
+							<span class="fontSize16"><?php echo $row['beneficiary_address']; ?></span>
 						</td>
                     </tr>
                     <tr>
 						<td colspan="5">
 							<span>Opener's Name & Address : </span>
-							<span class="fonSize"><?php echo $row['openers_name']; ?></span></br>
-							<span class="fonSize"><?php echo $row['openers_address']; ?></span>
+							<span class="fontSize18"><?php echo $row['openers_name']; ?></span></br>
+							<span class="fontSize16"><?php echo $row['openers_address']; ?></span>
 						</td>
                     </tr>
                     <tr>
-						<td width="15%"><span>Draft Amount</span></br><span> USD <?php echo $row['draft_amount']; ?></span></td>
-						<td width="25%"><span>In Words</span></br><span>US Doller <?php echo convertNumberToWords($row['draft_amount']).' Only';?></span></td>
+						<td width="15%"><span>Draft Amount</span></br><span class="fontSize16"> USD <?php echo $row['draft_amount']; ?></span></td>
+						<td width="25%"><span>In Words</span></br><span class="fontSize16">US Doller <?php echo convertNumberToWords($row['draft_amount']).' Only';?></span></td>
 						<td width="10%">
 							<p>
 								<span class="checkBox">
@@ -174,8 +178,8 @@
 						</td>
                     </tr>
                     <tr>
-						<td colspan="3" height="200px;"><span><center>Please specity commodities, price, quantity, indent no. etc.</center></span><span><?php echo $row['commodities']; ?></span></td>
-						<td colspan="2" width="19%"><p>Country of Origin :</p><span><?php echo $row['country_origin']; ?></span></td>
+						<td colspan="3" height="200px;"><span><center>Please specity commodities, price, quantity, indent no. etc.</center></span><span class="fontSize16"><?php echo $row['commodities']; ?></span></td>
+						<td colspan="2" width="19%"><p>Country of Origin :</p><span class="fontSize16"><?php echo $row['country_origin']; ?></span></td>
                     </tr>
                     <tr>
 						<td colspan="5"><p>DOCUMENTYS REQUIRED SA INDICATED BY CHECK (X)</p></td>
@@ -183,11 +187,11 @@
                     <tr>
 						<td colspan="2"><p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Commercial invoice in sixtuplicate</p></td>
 						<td><p>Bangladesh Bank Registration No.</p></td>
-						<td colspan="2"><p>Import Licence/LCAF No. <?php echo $row['lcaf_no']; ?></p></td>
+						<td colspan="2"><p>Import Licence/LCAF No. <span class="fontSize16"><?php echo $row['lcaf_no']; ?></span></p></td>
                     </tr>
                     <tr>
 						<td colspan="3"><p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Special customs invoice in duplicate</p></td>
-						<td colspan="2"><p>IRC No.: <?php echo $row['irc_no']; ?></p></td>
+						<td colspan="2"><p>IRC No.: <span class="fontSize16"><?php echo $row['irc_no']; ?></span></p></td>
                     </tr>
                     <tr>
 						<td colspan="5"><p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Other documents : </br><small style="padding-left:400px;">(if special documents are required please specify name of issuer)</small></p>
@@ -257,9 +261,9 @@
                     </tr>
                     <tr style="height:25px;">
 						<td colspan="2" style="height:25px;">
-							<p> Last Date of Shipment : <?php echo $row['last_shipment_date']; ?></p>
+							<p> Last Date of Shipment : <span class="fontSize16"><?php echo $row['last_shipment_date']; ?></span></p>
 						</td>
-						<td colspan="3" style="height:25px;"><p>last Date of Negotiation : <?php echo $row['last_neg_date']; ?></p></td>
+						<td colspan="3" style="height:25px;"><p>last Date of Negotiation : <span class="fontSize16"><?php echo $row['last_neg_date']; ?></span></p></td>
                     </tr>
                     <tr>
 						<td colspan="5"><p>Others terms and conditions if any : </br>
