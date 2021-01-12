@@ -178,7 +178,7 @@
 						</td>
                     </tr>
                     <tr>
-						<td colspan="3" height="200px;"><span><center>Please specity commodities, price, quantity, indent no. etc.</center></span><span class="fontSize16"><?php echo $row['commodities']; ?></span></td>
+						<td colspan="3" height="180px;"><span><center>Please specity commodities, price, quantity, indent no. etc.</center></span><span class="fontSize16"><?php echo $row['commodities']; ?></span></td>
 						<td colspan="2" width="19%"><p>Country of Origin :</p><span class="fontSize16"><?php echo $row['country_origin']; ?></span></td>
                     </tr>
                     <tr>
@@ -266,7 +266,7 @@
 						<td colspan="3" style="height:25px;"><p>last Date of Negotiation : <span class="fontSize16"><?php echo $row['last_neg_date']; ?></span></p></td>
                     </tr>
                     <tr>
-						<td colspan="5"><p>Others terms and conditions if any : </br>
+						<td colspan="5"><p>Others terms and conditions if any : 
 						  i) Foreign Bank's Charges on opener's/beneficiary's A/C</br>
 						 ii) </br>
 						iii) </br>
