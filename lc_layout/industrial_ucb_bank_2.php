@@ -40,6 +40,13 @@
 		padding:3px;
 		margin:0px 5px;
 	}
+	.fontSize18{
+		font-size:18px;
+		font-weight:bold;
+	}
+	.fontSize16{
+		font-size:18px;
+	}
 	.table-bordered td, .table-bordered th {
 		border: 1px solid #000;
 	}
@@ -52,9 +59,9 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<h2>United Commercial Bank Ltd</h2>
-				<p>____________________________</p>
-				<p>____________________________</p>
-				<p>____________________________</p>
+				<p>_____________________________________________________</p>
+				<p>_____________________________________________</p>
+				<p>____________________________________</p>
 			</div>
 			<div class="col-sm-6">
 				<div class="row">
@@ -78,7 +85,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<p>Plese open confirmed irrevocable letter of credit through your correspondent by <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> MaillAirmail <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Teletransmission in full  <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span>  Teletransmission in brief details of which are as follows :  <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Swift</p>
+				<p style="font-size:14px;">Plese open confirmed irrevocable letter of credit through your correspondent by <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Mail/Airmail <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Teletransmission in full  <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span>  Teletransmission in brief details of which are as follows :  <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Swift</p>
 			</div>
 		</div>
 		<div class="row">
@@ -87,21 +94,21 @@
                   <tbody>
                     <tr>
 						<td colspan="5">
-							<span>Beneficiary's Name & Address</span></br>
-							<span><?php echo $row['beneficiary_name']; ?></span></br>
-							<span><?php echo $row['beneficiary_address']; ?></span>
+							<span>Beneficiary's Name & Address : </span>
+							<span class="fontSize18"><?php echo $row['beneficiary_name']; ?></span></br>
+							<span class="fontSize16"><?php echo $row['beneficiary_address']; ?></span>
 						</td>
                     </tr>
                     <tr>
 						<td colspan="5">
-							<span>Opener's Name & Address</span></br>
-							<span><?php echo $row['openers_name']; ?></span></br>
-							<span><?php echo $row['openers_address']; ?></span>
+							<span>Opener's Name & Address : </span>
+							<span class="fontSize18"><?php echo $row['openers_name']; ?></span></br>
+							<span class="fontSize16"><?php echo $row['openers_address']; ?></span>
 						</td>
                     </tr>
                     <tr>
-						<td width="20%"><span>Draft Amount</span></br><span><?php echo $row['draft_amount']; ?></span></td>
-						<td width="25%"><span>In Words</span></br><span><?php echo convertNumberToWords($row['draft_amount']).' Only';?></span></td>
+						<td width="15%"><span>Draft Amount</span></br><span class="fontSize16"> USD <?php echo $row['draft_amount']; ?></span></td>
+						<td width="25%"><span>In Words</span></br><span class="fontSize16">US Doller <?php echo convertNumberToWords($row['draft_amount']).' Only';?></span></td>
 						<td width="11%">
 							<p>
 								<span class="checkBox">
@@ -171,26 +178,26 @@
 						</td>
                     </tr>
                     <tr>
-						<td colspan="3"><p>Please specity commodities, price, quantity, indent no. etc.</p><span><?php echo $row['commodities']; ?></span></td>
-						<td colspan="2" width="19%"><p>Country of Origin :</p><span><?php echo $row['country_origin']; ?></span></td>
+						<td colspan="3" height="170px;"><span><center>Please specity commodities, price, quantity, indent no. etc.</center></span><span class="fontSize16"><?php echo $row['commodities']; ?></span></td>
+						<td colspan="2" width="19%"><p>Country of Origin :</p><span class="fontSize16"><?php echo $row['country_origin']; ?></span></td>
                     </tr>
                     <tr>
-						<td colspan="5"><p>DOCUMENTYS REQUIRED SA INDICATED BY CHECK (X)</p></td>
+						<td colspan="5"><p>DOCUMENTYS REQUIRED AS INDICATED BY CHECK (X)</p></td>
                     </tr>
                     <tr>
 						<td colspan="2"><p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Commercial invoice in sixtuplicate</p></td>
-						<td><p>Bangladesh Bank Registration No.</p></td>
-						<td colspan="2"><p>Import Licence/LCAF No. <?php echo $row['lcaf_no']; ?></p></td>
+						<td colspan="3"><div class="row"><div class="col-sm-6">Bangladesh Bank Registration No.</br></div><div class="col-sm-6">Import Licence/LCAF No.  </br><span class="fontSize16"><?php echo $row['lcaf_no']; ?></span></div></div></td>
                     </tr>
                     <tr>
 						<td colspan="2"><p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Special customs invoice in duplicate</p></td>
-						<td><p>H.S code: <?php echo $row['hs_code']; ?></p></td>
-						<td colspan="2"><p>IRC No.: <?php echo $row['irc_no']; ?></p></td>
+						<td colspan="3"><div class="row"><div class="col-sm-6">H.S code: <span class="fontSize16"><?php echo $row['hs_code']; ?></span></div><div class="col-sm-6">IRC No.: <span class="fontSize16"><?php echo $row['irc_no']; ?></span></div></div></td>
                     </tr>
                     <tr>
-						<td colspan="5"><p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Other documents : ______________________________________________________________________________________________________________________</br><small style="padding-left:400px;">(if special documents are required please specify name of issuer)</small></p>
+						<td colspan="5"><p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Other documents : ___________________________________________________________________________________________________</br><small style="padding-left:400px;">(if special documents are required please specify name of issuer)</small></p>
 						<p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Full set of clean on board bills of lading <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Airway Bill <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Post parcel <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Relating to shipment <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span>  T/R <span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> R/R</p>
-						<p><center> from __<?php echo $row['shipment_from']; ?>__  to __<?php echo $row['shipment_to']; ?>__ drawn</br><small>(in each case please certify port of country only)</small></center></p>
+						<p style=""> from <span style="display: inline-block;padding: 0px 100px 0px 100px;border-bottom: 1px solid #888;font-size:18px;"><?php echo $row['shipment_from']; ?></span>to<span style="display: inline-block;padding: 0px 100px 0px 100px;border-bottom: 1px solid #888;font-size:18px;"><?php echo $row['shipment_to']; ?></span>drawn</br><span style="padding-left:200px;">(in each case please certify port of country only)</span></p>
+							<span style="width:600px;">to the order of <b>United Commercial Bank Ltd.</b></span>
+							<span style="padding-left:320px;width:600px;">Marked notify above account party</span>
 						</td>
                     </tr>
                     <tr>
@@ -201,7 +208,7 @@
 						</td>
 						<td colspan="3">
 							<p>(Name and address of Insurence Company)</p>
-							<span><?php echo $row['name_of_ins']; ?>, <?php echo $row['ins_address']; ?></span></br>
+							<span><?php echo $row['name_of_ins']; ?>, <?php echo $row['ins_address']; ?></span>
 						</td>
                     </tr>
                     <tr>
@@ -263,7 +270,7 @@
 						<td colspan="3" style="height:25px;"><p>last Date of Negotiation : <?php echo $row['last_neg_date']; ?></p></td>
                     </tr>
                     <tr>
-						<td colspan="5"><p>Others terms and conditions if any : </br>
+						<td colspan="5"><p>Others terms and conditions if any :
 						  i) Foreign Bank's Charges on opener's/beneficiary's A/C</br>
 						 ii) </br>
 						iii) </br>

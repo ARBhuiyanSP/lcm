@@ -367,7 +367,7 @@ function convertNumberToWords(float $number)
     $Dollar = implode('', array_reverse($str));
     $Cent = implode('', array_reverse($str2));
     $Cent = ($decimal_part > 0) ? $Cent . ' Cent' : '';
-    return ($Dollar ? $Dollar . 'Dollar ' : '') . $Cent;
+    return ($Dollar ? $Dollar . ' ' : '') . $Cent;
 }
     
     function getmaterialbrand(){

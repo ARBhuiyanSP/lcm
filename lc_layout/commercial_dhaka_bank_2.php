@@ -110,9 +110,9 @@
 						</td>
                     </tr>
                     <tr>
-						<td width="15%"><span>Draft Amount</span></br><span class="fontSize16"> USD <?php echo $row['draft_amount']; ?></span></td>
+						<td width="10%"><span>Draft Amount</span></br><span class="fontSize16"> USD <?php echo $row['draft_amount']; ?></span></td>
 						<td width="25%"><span>In Words</span></br><span class="fontSize16">US Doller <?php echo convertNumberToWords($row['draft_amount']).' Only';?></span></td>
-						<td width="10%">
+						<td width="20%">
 							<p>
 								<span class="checkBox">
 									<?php if(isset($row['at_sight']) && !empty($row['at_sight'])){ ?>
@@ -182,7 +182,7 @@
 						<td colspan="2" width="19%"><p>Country of Origin :</p><span class="fontSize16"><?php echo $row['country_origin']; ?></span></td>
                     </tr>
                     <tr>
-						<td colspan="5"><p>DOCUMENTYS REQUIRED SA INDICATED BY CHECK (X)</p></td>
+						<td colspan="5"><p>DOCUMENTYS REQUIRED AS INDICATED BY CHECK (X)</p></td>
                     </tr>
                     <tr>
 						<td colspan="2"><p><span class="checkBox"><img src="img/Nocheckmark.png" height="15px" /></span> Commercial invoice in sixtuplicate</p></td>
