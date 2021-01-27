@@ -306,8 +306,8 @@ label{
 							<div class="col-md-2">
 								<div class="form-group">
 									<label>Date </label>
-									<div class="input-group date" name="ins_date" id="ins_date" data-target-input="nearest">
-										<input type="text" class="form-control datetimepicker-input" data-target="#ins_date" data-toggle="datetimepicker"/>
+									<div class="input-group date" id="ins_date" data-target-input="nearest">
+										<input type="text" class="form-control datetimepicker-input" data-target="#ins_date" data-toggle="datetimepicker" name="ins_date"/>
 									</div>
 								</div>
 								<!-- /.form-group -->
@@ -345,8 +345,8 @@ label{
 							<div class="col-md-2">
 								<div class="form-group">
 									<label>Last Date of Shipment </label>
-									<div class="input-group date" name="last_shipment_date" id="last_shipment_date" data-target-input="nearest">
-										<input type="text" class="form-control datetimepicker-input" data-target="#last_shipment_date" data-toggle="datetimepicker"/>
+									<div class="input-group date" id="last_shipment_date" data-target-input="nearest">
+										<input type="text" class="form-control datetimepicker-input" data-target="#last_shipment_date" data-toggle="datetimepicker" name="last_shipment_date"/>
 									</div>
 								</div>
 								<!-- /.form-group -->
@@ -392,8 +392,8 @@ label{
 							<div class="col-md-2">
 								<div class="form-group">
 									<label>Last Date of Negotiation </label>
-									<div class="input-group date" name="last_neg_date" id="last_neg_date" data-target-input="nearest">
-										<input type="text" class="form-control datetimepicker-input" data-target="#last_neg_date" data-toggle="datetimepicker"/>
+									<div class="input-group date" id="last_neg_date" data-target-input="nearest">
+										<input type="text" class="form-control datetimepicker-input" data-target="#last_neg_date" data-toggle="datetimepicker" name="last_neg_date"/>
 									</div>
 								</div>
 								<!-- /.form-group -->

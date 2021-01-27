@@ -16,7 +16,7 @@
     <!-- /.content-header -->
 <?php
 $sl_no=$_GET['no'];
-$sql = "select * from `lc_industrial` where `sl_no`='$sl_no'";
+$sql = "select * from `tt` where `sl_no`='$sl_no'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 
@@ -30,7 +30,7 @@ $bank = $row['bank'];
 			<div class="col-md-12">
 				<div class="card">
 				  <div class="card-header">
-					<h3 class="card-title">LC Print View - [Industrial] <button type="button" class="btn btn-info btn-xs" onclick="window.location.href='lc_industrial_list.php';"><i class="nav-icon fas fa-bars"></i> Back To LC List</button></h3>
+					<h3 class="card-title">TT Print View - [Commercial]</h3>
 				  </div>
 				  <!-- /.card-header -->
 				  <div class="card-body">
@@ -38,31 +38,14 @@ $bank = $row['bank'];
 					<?php 
 						if($bank == 'Dhaka Bank')
 						{ 
-							include('lc_layout/industrial_dhaka_bank_1.php');
-							include('lc_layout/industrial_dhaka_bank_2.php');
-						}
-						else if($bank == 'UCB Bank')
-						{
-							include('lc_layout/industrial_ucb_bank_1.php');
-							include('lc_layout/industrial_ucb_bank_2.php');
-						}
-						else if($bank == 'National Bank Limited')
-						{
-							include('lc_layout/industrial_nbl_bank_1.php');
-							include('lc_layout/industrial_nbl_bank_2.php');
-						}
-						else if($bank == 'One Bank')
-						{
-							include('lc_layout/industrial_one_bank_1.php');
-							include('lc_layout/industrial_one_bank_2.php');
-						}
-						else if($bank == 'NCC Bank')
-						{
-							include('lc_layout/industrial_ncc_bank_1.php');
-							include('lc_layout/industrial_ncc_bank_2.php');
-						}
-						else
-						{
+							include('lc_layout/tt_dhaka_bank_1.php');
+						}else if($bank == 'UCB Bank'){
+							include('lc_layout/tt_ucb_bank_1.php');
+						}else if($bank == 'One Bank'){
+							include('lc_layout/tt_one_bank_1.php');
+						}else if($bank == 'NCC Bank'){
+							include('lc_layout/tt_ncc_bank_1.php');
+						}else{
 							echo 'Something Error ! Layout May Not Found...!';
 						} 
 					?>

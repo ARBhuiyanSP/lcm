@@ -80,6 +80,12 @@
               <p>LC - Commercial</p>
             </a>
           </li>
+		  <li class="nav-item">
+            <a href="tt-entry.php" class="nav-link">
+              <i class="nav-icon fas fa-copy" style="color: #17A2B8;"></i>
+              <p>TT Entry</p>
+            </a>
+          </li>
           <li class="nav-header">REPORTS</li>
           <li class="nav-item">
             <a href="#" class="nav-link">

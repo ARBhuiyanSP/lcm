@@ -62,7 +62,6 @@
 	  outline: 0;
 	  background: transparent;
 	  border-bottom: 1px solid black;
-	  font-weight:bold;
 	}
 	.brdr{
 		border-top: 1px solid black;
@@ -106,26 +105,26 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<p><span style="width:3%;">I/We</span>  <input value="<?php echo $row['openers_name']; ?>, <?php echo $row['openers_address']; ?>" style="width:97%;"></br>
+				<p><span style="width:3%;">I/We</span>  <input value="Saif Powertec Ltd" style="width:97%;"></br>
 				<small style="padding-left:400px;">(Name and Full Address of openers)</small></br>
 				 <input value="" style="width:100%;"></input></br>
 				 <input value="" style="width:100%;"></input></br>
 				 hereby request you establish by Air mail/Cable on my/our behalf a confirmed irrevocable letter of Credit without recourse infavour of </br>
-				 <span style="width:2%;">M/S</span>  <input value="<?php echo $row['beneficiary_name']; ?>, <?php echo $row['beneficiary_address']; ?>" style="width:97%;"></input></br>
+				 <span style="width:2%;">M/S</span>  <input value="Saif Powertec Ltd" style="width:97%;"></input></br>
 				<small style="padding-left:400px;">(Name and Full Address of beneficiary)</small></br>
 				 <input value="" style="width:100%;"></input></br>
 				and instruct your foreign Correspondents to negotiate the drafts drawn on us at <input value="" style="width:40%;"></input> sight without
-				recourse to them to the extent of <input value="<?php echo $row['lc_amount']; ?>" style="width:30%;"> Equivalent Tk. <input value="" style="width:41%;"> </br>
+				recourse to them to the extent of <input value="" style="width:30%;"> Equivalent Tk. <input value="" style="width:41%;"> </br>
 				for full Invoice value of shipment(s) purporting to be <input value="" style="width:69%;"></input></br>
 				<input value="" style="width:100%;"></input></br>
 				<small style="padding-left:400px;">(Nature of goods quantity, if necessary)</small></br>
-				<input value="<?php echo $row['commodities']; ?>" style="width:100%;"></input></br>
+				<input value="" style="width:100%;"></input></br>
 				<input value="" style="width:100%;"></input></br>
 				as per Indent No.<input value="" style="width:55%;"> dated <input value="" style="width:30%;"></br>
 				<span style="width:10%;">of Messrs</span>  <input value="" style="width:94%;"></br>
 				<small style="padding-left:400px;">(Name of indentor)</small></br>
 				accompanied by the following documents : </br>
-					<span style="padding-left:150px;">(a) Signed invoices in octuplicate certifying merchandise to be of <input value="<?php echo $row['country_origin']; ?>" style="width:40%;text-align:center;"> origin</span>
+					<span style="padding-left:150px;">(a) Signed invoices in octuplicate certifying merchandise to be of <input value="" style="width:40%;"> origin</span>
 					<span style="padding-left:150px;">(b) Full set of clean "Shipped on board" Ocean Bills of Lading drawn or endorsed to the order of National Credit and Commerce bank Ltd.</span>
 					<span style="padding-left:165px;"> showing freight prepaid/freight to pay marked notify openers <input value="" style="width:46%;"></span></br>
 					<span style="padding-left:150px;"><input value="" style="width:85%;"></span></br>
@@ -136,11 +135,11 @@
 					<span style="padding-left:150px;">(e) Insurance has been arranged in Bangladesh.All shipments under this credit must be advised by the beneficiaries immediately after</span></br>
 					<span style="padding-left:165px;"> shipment dirrect to M/S.<input value="" style="width:68%;"></span></br>
 					<input value="" style="width:76%;"> and to us and the openers referring to</br>
-					<input value="<?php echo $row['name_of_ins']; ?>" style="width:45%;"> Cover Notes No. <input value="<?php echo $row['insurance_cover_no']; ?>" style="width:45%;"></br>
+					<input value="" style="width:45%;"> Cover Notes No. <input value="" style="width:45%;"></br>
 					<small style="padding-left:150px;">(Name of Insurance Co.)</small></br>
 					giving full details of shipment. A copy of this advice to accompany each set of documents.</br>
-					The documents referred to herein should purport to be for shipment from <input value="<?php echo $row['shipment_from']; ?>" style="width:56%;text-align:center;"></br>
-					To <input value="<?php echo $row['shipment_to']; ?>" style="width:48%;text-align:center;"> by  <input value="" style="width:48%;"></br>
+					The documents referred to herein should purport to be for shipment from <input value="" style="width:56%;"></br>
+					To <input value="" style="width:48%;"> by  <input value="" style="width:48%;"></br>
 					<small style="padding-left:150px;">(Name of port in Bangladesh)</small><small style="padding-left:300px;">(State whether by Steamer/Air Freight/Post Parcel)</small></br>
 					<span style="padding-left:150px;">Bills of Lading must be dated not later than <input value="" style="width:58%;"> </span></br>
 					<span style="padding-left:150px;">Bills of Exchange must be negotiated not later than <input value="" style="width:53%;"> </span></br>
@@ -149,8 +148,8 @@
 				 <input value="" style="width:100%;"></br>
 				 <input value="" style="width:100%;"></br>
 				 <input value="" style="width:100%;"></br>
-				<span style="padding-left:74px;">I/We hareby declare that I/We holld C.C.I & E Registration No <input value="<?php echo $row['irc_no']; ?>" style="width:27%;"> dated <input value="" style="width:25%;"></span></br>
-				and I/We have been issued import L C A(s) No. <input value="<?php echo $row['lcaf_no']; ?>" style="width:72%;"></br>
+				<span style="padding-left:74px;">I/We hareby declare that I/We holld C.C.I & E Registration No <input value="" style="width:27%;"> dated <input value="" style="width:25%;"></span></br>
+				and I/We have been issued import L C A(s) No. <input value="" style="width:72%;"></br>
 				dated <input value="" style="width:25%;"> for Tk. <input value="" style="width:28%;">valid upto <input value="" style="width:28%;"> which</br>
 				L C A(s) is/are valid and effective. The goods are covered under section <input value="" style="width:22%;"> Group part <input value="" style="width:12%;">Page No. <input value="" style="width:12%;"></br>
 				Serial No. <input value="" style="width:10%;">Import policy order <input value="" style="width:10%;"> to <input value="" style="width:10%;"> under Import Control Regulations Act.Notwithstanding any subsequent invalidation or cancelation to the said licence/L C A. I/We shall be bound to remburse to you the amount due or any other charge and expenses incurred by you and your correspondents by reason of establishment and/or negotiation or payments under the letter of credit established under these Instructions.</br>

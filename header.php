@@ -10,6 +10,7 @@ include 'includes/industrial_process.php';
 include 'includes/commercial_process.php';
 include 'includes/bank_process.php';
 include 'includes/country_process.php';
+include 'includes/tt_process.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
