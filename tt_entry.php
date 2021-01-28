@@ -40,14 +40,14 @@ label{
         <!-- Info boxes -->
         <div class="row">
 			<div class="col-md-12">
-				<div class="card">
+				<div class="card" style="border:2px solid #17A2B8;">
 					<div class="card-header">
 						<h3 class="card-title">TT Commercial Data Entry</h3>
 						<button type="button" class="btn btn-info btn-xs" onclick="window.location.href='tt_list.php';"><i class="nav-icon fas fa-bars"></i> TT List</button>
 					</div>
 					<form id="" method="POST" action="#">
 					<!-- /.card-header -->
-					<div class="card-body">
+					<div class="card-body" style="background-color:#E1E3E6;">
 						<div class="row">
 							<div class="col-md-1">
 								<div class="form-group">
