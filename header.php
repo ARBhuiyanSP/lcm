@@ -61,6 +61,11 @@ include 'includes/tt_process.php';
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- Custom style -->
   <link rel="stylesheet" href="css/invstyle.css">
+  <style>
+  [class*=icheck-]>input:first-child+input[type=hidden]+label::before, [class*=icheck-]>input:first-child+label::before{
+	  border:1px solid #000000;
+  }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
