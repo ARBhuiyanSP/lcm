@@ -98,7 +98,6 @@
 								<a href="lc_industrial_view.php?no=<?php echo $item['sl_no']; ?>" title="View" class="icon-button btn btn-success" style="padding:3px;"><i class="fas fa-eye"></i></a> 
 								<a href="lc_industrial_print.php?no=<?php echo $item['sl_no']; ?>" title="Bank Print" class="icon-button btn btn-primary" style="padding:3px;"><i class="fas fa-print"></i></a> 
 								<a href="#" class="icon-button btn btn-info" style="padding:3px;"><i class="fas fa-edit"></i></a>
-								<a href="#" class="icon-button btn btn-danger" style="padding:3px;"><i class="fas fa-trash"></i></a>
 							</td>
 						</tr>
 						<?php }} ?>

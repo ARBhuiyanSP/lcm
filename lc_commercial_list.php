@@ -60,13 +60,13 @@
                 <table id="example1" class="table table-bordered table-striped">
 					<thead>
 						<tr>
-							<th width="10%">LCAF No</th>
-							<th width="15%">Importer Name</th>
+							<th width="8%">LCAF No</th>
+							<th width="17%">Importer Name</th>
 							<th width="15%">IRC No</th>
 							<th width="10%">LC Amount</th>
 							<th width="10%">Bank</th>
-							<th>Items</th>
-							<th width="12%" class="TAC">Actions</th>
+							<th width="30%">Items</th>
+							<th width="10%" class="TAC">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -100,21 +100,20 @@
 							<td class="TAC">
 								<a href="lc_industrial_view.php?no=<?php echo $item['sl_no']; ?>" title="View" class="icon-button btn btn-success" style="padding:3px;"><i class="fas fa-eye"></i></a> 
 								<a href="lc_commercial_print.php?no=<?php echo $item['sl_no']; ?>" title="Bank Print" class="icon-button btn btn-primary" style="padding:3px;"><i class="fas fa-print"></i></a> 
-								<a href="#" class="icon-button btn btn-info" style="padding:3px;"><i class="fas fa-edit"></i></a>
-								<a href="#" class="icon-button btn btn-danger" style="padding:3px;"><i class="fas fa-trash"></i></a>
+								<a href="lc_commercial_edit.php?no=<?php echo $item['sl_no']; ?>" class="icon-button btn btn-info" style="padding:3px;"><i class="fas fa-edit"></i></a>
 							</td>
 						</tr>
 						<?php }} ?>
 					</tbody>
 					<tfoot>
 						<tr>
-							<th width="10%">LCAF No</th>
-							<th width="15%">Importer Name</th>
+							<th width="8%">LCAF No</th>
+							<th width="17%">Importer Name</th>
 							<th width="15%">IRC No</th>
 							<th width="10%">LC Amount</th>
 							<th width="10%">Bank</th>
-							<th>Items</th>
-							<th width="12%" class="TAC">Actions</th>
+							<th width="30%">Items</th>
+							<th width="10%" class="TAC">Actions</th>
 						</tr>
                   </tfoot>
                 </table>

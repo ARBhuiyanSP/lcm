@@ -40,11 +40,13 @@ $bank = $row['bank'];
 						{ 
 							include('lc_layout/industrial_dhaka_bank_1.php');
 							include('lc_layout/industrial_dhaka_bank_2.php');
+							include('lc_layout/industrial_dhaka_bank_2b.php');
 						}
 						else if($bank == 'UCB Bank')
 						{
 							include('lc_layout/industrial_ucb_bank_1.php');
 							include('lc_layout/industrial_ucb_bank_2.php');
+							include('lc_layout/industrial_ucb_bank_2b.php');
 						}
 						else if($bank == 'National Bank Limited')
 						{
@@ -60,6 +62,7 @@ $bank = $row['bank'];
 						{
 							include('lc_layout/industrial_ncc_bank_1.php');
 							include('lc_layout/industrial_ncc_bank_2.php');
+							include('lc_layout/industrial_ncc_bank_2b.php');
 						}
 						else
 						{

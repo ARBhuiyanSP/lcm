@@ -81,9 +81,9 @@
             </a>
           </li>
 		  <li class="nav-item">
-            <a href="tt-entry.php" class="nav-link">
+            <a href="tt_list.php" class="nav-link">
               <i class="nav-icon fas fa-copy" style="color: #17A2B8;"></i>
-              <p>TT Entry</p>
+              <p>TT</p>
             </a>
           </li>
           <li class="nav-header">REPORTS</li>
