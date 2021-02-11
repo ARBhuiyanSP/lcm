@@ -58,7 +58,7 @@ label{
 								<!-- /.form-group -->
 							</div>
 							<!-- /.col -->
-							<div class="col-md-3">
+							<div class="col-md-2">
 								<div class="form-group">
 								  <label>Bank Name</label>
 								  <select class="form-control select2"t name="bank" style="width: 100%;">
@@ -75,7 +75,7 @@ label{
 								<!-- /.form-group -->
 							</div>
 							<!-- /.col -->
-							<div class="col-md-2">
+							<div class="col-md-1">
 								<div class="form-group">
 								  <label>LCAF No</label>
 								  <input class="form-control" type="text" name="lcaf_no" />
@@ -99,7 +99,7 @@ label{
 								<!-- /.form-group -->
 							</div>
 							<!-- /.col -->
-							<div class="col-md-3">
+							<div class="col-md-2">
 								<div class="form-group">
 								  <label>IRC No</label>
 								  <input class="form-control" type="text" name="irc_no" />
@@ -115,7 +115,7 @@ label{
 								<!-- /.form-group -->
 							</div>
 							<!-- /.col -->
-							<div class="col-md-4">
+							<div class="col-md-5">
 								<label>Source of Financing</label>
 								<div class="form-group clearfix">
 									<div class="icheck-primary d-inline">
@@ -140,6 +140,22 @@ label{
 									</div>
 								</div>
 								<!-- /.form-group -->
+							</div>
+							<!-- /.col -->
+							<div class="col-md-2">
+								<div class="form-group">
+								  <label>Currency</label>
+								  <select class="form-control select2"t name="currency" style="width: 100%;">
+									<option> Choose Currency</option>
+										<?php 
+										$item_details = getTableDataByTableName('currency', '', 'id');
+										if (isset($item_details) && !empty($item_details)) {
+											foreach ($item_details as $item) {
+										?>
+									<option value="<?php echo $item['currency_name']; ?>"><?php echo $item['currency_name']; ?> - <?php echo $item['currency_icon']; ?></option>
+										<?php }} ?>
+								  </select>
+								</div>
 							</div>
 							<!-- /.col -->
 							<div class="col-md-3">

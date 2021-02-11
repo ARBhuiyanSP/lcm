@@ -110,8 +110,8 @@
 						</td>
                     </tr>
                     <tr>
-						<td width="10%"><span>Draft Amount</span></br><span class="fontSize16"> USD <?php echo $row['draft_amount']; ?></span></td>
-						<td width="25%"><span>In Words</span></br><span class="fontSize16">US Doller <?php echo convertNumberToWords($row['draft_amount']).' Only';?></span></td>
+						<td width="10%"><span>Draft Amount</span></br><span class="fontSize16"><?php echo $row['currency']; ?> <?php echo $row['draft_amount']; ?></span></td>
+						<td width="25%"><span>In Words</span></br><span class="fontSize16"><?php echo convertNumberToWords($row['draft_amount']). $row['currency'].' Only';?></span></td>
 						<td width="20%">
 							<p>
 								<span class="checkBox">

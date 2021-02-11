@@ -31,6 +31,7 @@
 				$applicant_address				= $_POST['applicant_address'];
 				$irc_no							= $_POST['irc_no'];
 				$year_of_renewal				= $_POST['year_of_renewal'];
+				$currency						= $_POST['currency'];
 				$lc_amount						= $_POST['lc_amount'];
 				$sof_cash						= $_POST['sof_cash'];
 				$sof_barter						= $_POST['sof_barter'];
@@ -75,7 +76,7 @@
 			
 				
 					
-				$query = "INSERT INTO `lc_industrial` (`sl_no`,`bank`,`lcaf_no`,`applicant_name`,`applicant_address`,`irc_no`,`year_of_renewal`,`lc_amount`,`sof_cash`,`sof_barter`,`sof_loan`,`sof_credit`,`sof_other`,`description_of_item_imported`,`restricted_items`,`beneficiary_name`,`beneficiary_address`,`openers_name`,`openers_address`,`draft_amount`,`at_sight`,`days_da_dp`,`cif`,`cfr`,`fob`,`drawn_on_us`,`drawn_on_them`,`country_origin`,`commodities`,`hs_code`,`shipment_from`,`shipment_to`,`insurance_cover_no`,`ins_date`,`ins_amount`,`ins_part_shipment`,`ins_allowed`,`ins_prohibited`,`last_shipment_date`,`name_of_ins`,`ins_address`,`ins_co_transhipment`,`ins_co_allowed`,`ins_co_prohibited`,`last_neg_date`) VALUES ('$sl_no','$bank','$lcaf_no','$applicant_name','$applicant_address','$irc_no','$year_of_renewal','$lc_amount','$sof_cash','$sof_barter','$sof_loan','$sof_credit','$sof_other','$description_of_item_imported','$restricted_items','$beneficiary_name','$beneficiary_address','$openers_name','$openers_address','$draft_amount','$at_sight','$days_da_dp','$cif','$cfr','$fob','$drawn_on_us','$drawn_on_them','$country_origin','$commodities','$hs_code','$shipment_from','$shipment_to','$insurance_cover_no','$ins_date','$ins_amount','$ins_part_shipment','$ins_allowed','$ins_prohibited','$last_shipment_date','$name_of_ins','$ins_address','$ins_co_transhipment','$ins_co_allowed','$ins_co_prohibited','$last_neg_date')";
+				$query = "INSERT INTO `lc_industrial` (`sl_no`,`bank`,`lcaf_no`,`applicant_name`,`applicant_address`,`irc_no`,`year_of_renewal`,`currency`,`lc_amount`,`sof_cash`,`sof_barter`,`sof_loan`,`sof_credit`,`sof_other`,`description_of_item_imported`,`restricted_items`,`beneficiary_name`,`beneficiary_address`,`openers_name`,`openers_address`,`draft_amount`,`at_sight`,`days_da_dp`,`cif`,`cfr`,`fob`,`drawn_on_us`,`drawn_on_them`,`country_origin`,`commodities`,`hs_code`,`shipment_from`,`shipment_to`,`insurance_cover_no`,`ins_date`,`ins_amount`,`ins_part_shipment`,`ins_allowed`,`ins_prohibited`,`last_shipment_date`,`name_of_ins`,`ins_address`,`ins_co_transhipment`,`ins_co_allowed`,`ins_co_prohibited`,`last_neg_date`) VALUES ('$sl_no','$bank','$lcaf_no','$applicant_name','$applicant_address','$irc_no','$year_of_renewal','$currency','$lc_amount','$sof_cash','$sof_barter','$sof_loan','$sof_credit','$sof_other','$description_of_item_imported','$restricted_items','$beneficiary_name','$beneficiary_address','$openers_name','$openers_address','$draft_amount','$at_sight','$days_da_dp','$cif','$cfr','$fob','$drawn_on_us','$drawn_on_them','$country_origin','$commodities','$hs_code','$shipment_from','$shipment_to','$insurance_cover_no','$ins_date','$ins_amount','$ins_part_shipment','$ins_allowed','$ins_prohibited','$last_shipment_date','$name_of_ins','$ins_address','$ins_co_transhipment','$ins_co_allowed','$ins_co_prohibited','$last_neg_date')";
 				
 				$conn->query($query);
 				
