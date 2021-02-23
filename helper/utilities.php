@@ -335,7 +335,7 @@ $decimal = round($number - ($no = floor($number)), 2) * 100;
         13 => 'Thirteen', 14 => 'Fourteen', 15 => 'Fifteen',
         16 => 'Sixteen', 17 => 'Seventeen', 18 => 'Eighteen',
         19 => 'Nineteen', 20 => 'Twenty', 30 => 'Thirty',
-        40 => 'Forty', 50 => 'Ffifty', 60 => 'Sixty',
+        40 => 'Forty', 50 => 'Fifty', 60 => 'Sixty',
         70 => 'Seventy', 80 => 'Eighty', 90 => 'Ninety');
     $digits = array('', 'Hundred','Thousand','Lakh', 'Crore');
 
