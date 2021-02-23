@@ -318,54 +318,38 @@ function get_material_balance_transfer_in_quantity($param){
 }
 
 
-function convertNumberToWords($number){
-$decimal = round($number - ($no = floor($number)), 2) * 100;
-    $decimal_part = $decimal;
-    $hundred = null;
-    $hundreds = null;
-    $digits_length = strlen($no);
-    $decimal_length = strlen($decimal);
-    $i = 0;
-    $str = array();
-    $str2 = array();
-    $words = array(0 => '', 1 => 'One', 2 => 'Two',
-        3 => 'Three', 4 => 'Four', 5 => 'Five', 6 => 'Six',
-        7 => 'Seven', 8 => 'Eight', 9 => 'Nine',
-        10 => 'Ten', 11 => 'Eleven', 12 => 'Twelve',
-        13 => 'Thirteen', 14 => 'Fourteen', 15 => 'Fifteen',
-        16 => 'Sixteen', 17 => 'Seventeen', 18 => 'Eighteen',
-        19 => 'Nineteen', 20 => 'Twenty', 30 => 'Thirty',
-        40 => 'Forty', 50 => 'Fifty', 60 => 'Sixty',
-        70 => 'Seventy', 80 => 'Eighty', 90 => 'Ninety');
-    $digits = array('', 'Hundred','Thousand','Lakh', 'Crore');
-
-    while( $i < $digits_length ) {
-        $divider = ($i == 2) ? 10 : 100;
-        $number = floor($no % $divider);
-        $no = floor($no / $divider);
-        $i += $divider == 10 ? 1 : 2;
-        if ($number) {
-            $plural = (($counter = count($str)) && $number > 9) ? 's' : null;
-            $hundred = ($counter == 1 && $str[0]) ? ' and ' : null;
-            $str [] = ($number < 21) ? $words[$number].' '. $digits[$counter]. $plural.' '.$hundred:$words[floor($number / 10) * 10].' '.$words[$number % 10]. ' '.$digits[$counter].$plural.' '.$hundred;
-        } else $str[] = null;
+function convertNumberToWords($number){ 
+$amount_after_decimal = round($number - ($num = floor($number)), 2) * 100;
+   // Check if there is any number after decimal
+   $amt_hundred = null;
+   $count_length = strlen($num);
+   $x = 0;
+   $string = array();
+   $change_words = array(0 => '', 1 => 'One', 2 => 'Two',
+     3 => 'Three', 4 => 'Four', 5 => 'Five', 6 => 'Six',
+     7 => 'Seven', 8 => 'Eight', 9 => 'Nine',
+     10 => 'Ten', 11 => 'Eleven', 12 => 'Twelve',
+     13 => 'Thirteen', 14 => 'Fourteen', 15 => 'Fifteen',
+     16 => 'Sixteen', 17 => 'Seventeen', 18 => 'Eighteen',
+     19 => 'Nineteen', 20 => 'Twenty', 30 => 'Thirty',
+     40 => 'Forty', 50 => 'Fifty', 60 => 'Sixty',
+     70 => 'Seventy', 80 => 'Eighty', 90 => 'Ninety');
+  $here_digits = array('', 'Hundred','Thousand','Lakh', 'Crore');
+  while( $x < $count_length ) {
+       $get_divider = ($x == 2) ? 10 : 100;
+       $number = floor($num % $get_divider);
+       $num = floor($num / $get_divider);
+       $x += $get_divider == 10 ? 1 : 2;
+       if ($number) {
+         $add_plural = (($counter = count($string)) && $number > 9) ? 's' : null;
+         $amt_hundred = ($counter == 1 && $string[0]) ? ' and ' : null;
+         $string [] = ($number < 21) ? $change_words[$number].' '. $here_digits[$counter]. $add_plural.' 
+         '.$amt_hundred:$change_words[floor($number / 10) * 10].' '.$change_words[$number % 10]. ' 
+         '.$here_digits[$counter].$add_plural.' '.$amt_hundred;
+         }else $string[] = null;
+       }
+   $implode_to_Rupees = implode('', array_reverse($string));
+   $get_paise = ($amount_after_decimal > 0) ? "And " . ($change_words[$amount_after_decimal / 10] . " 
+   " . $change_words[$amount_after_decimal % 10]) . ' Cent' : '';
+   return ($implode_to_Rupees ? $implode_to_Rupees . 'Euros ' : '') . $get_paise;
     }
-
-    $d = 0;
-    while( $d < $decimal_length ) {
-        $divider = ($d == 2) ? 10 : 100;
-        $decimal_number = floor($decimal % $divider);
-        $decimal = floor($decimal / $divider);
-        $d += $divider == 10 ? 1 : 2;
-        if ($decimal_number) {
-            $plurals = (($counter = count($str2)) && $decimal_number > 9) ? 's' : null;
-            $hundreds = ($counter == 1 && $str2[0]) ? ' and ' : null;
-            @$str2 [] = ($decimal_number < 21) ? $words[$decimal_number].' '. $digits[$decimal_number]. $plural.' '.$hundred:$words[floor($decimal_number / 10) * 10].' '.$words[$decimal_number % 10]. ' '.$digits[$counter].$plural.' '.$hundred;
-        } else $str2[] = null;
-    }
-
-    $Rupees = implode('', array_reverse($str));
-    $paise = implode('', array_reverse($str2));
-    $paise = ($decimal_part > 0) ? $paise . ' Cent' : '';
-    return ($Rupees ? $Rupees . 'Euros ' : '') . $paise;
-}
