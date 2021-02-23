@@ -133,7 +133,7 @@
 		
 		<!-- Print LC Amount -->
 		<?php if(isset($row['lc_amount']) && !empty($row['lc_amount'])){ ?>
-		<div class="commonDataStyle" id="printLcAmount"> $ <?php echo $row['lc_amount']; ?></div>
+		<div class="commonDataStyle" id="printLcAmount"> € <?php echo $row['lc_amount']; ?></div>
 		<?php } ?>
 		
 		<!-- Print LC Amount in Words -->
