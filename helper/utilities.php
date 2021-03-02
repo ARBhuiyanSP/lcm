@@ -318,38 +318,58 @@ function get_material_balance_transfer_in_quantity($param){
 }
 
 
-function convertNumberToWords($number){ 
-$amount_after_decimal = round($number - ($num = floor($number)), 2) * 100;
-   // Check if there is any number after decimal
-   $amt_hundred = null;
-   $count_length = strlen($num);
-   $x = 0;
-   $string = array();
-   $change_words = array(0 => '', 1 => 'One', 2 => 'Two',
-     3 => 'Three', 4 => 'Four', 5 => 'Five', 6 => 'Six',
-     7 => 'Seven', 8 => 'Eight', 9 => 'Nine',
-     10 => 'Ten', 11 => 'Eleven', 12 => 'Twelve',
-     13 => 'Thirteen', 14 => 'Fourteen', 15 => 'Fifteen',
-     16 => 'Sixteen', 17 => 'Seventeen', 18 => 'Eighteen',
-     19 => 'Nineteen', 20 => 'Twenty', 30 => 'Thirty',
-     40 => 'Forty', 50 => 'Fifty', 60 => 'Sixty',
-     70 => 'Seventy', 80 => 'Eighty', 90 => 'Ninety');
-  $here_digits = array('', 'Hundred','Thousand','Lakh', 'Crore');
-  while( $x < $count_length ) {
-       $get_divider = ($x == 2) ? 10 : 100;
-       $number = floor($num % $get_divider);
-       $num = floor($num / $get_divider);
-       $x += $get_divider == 10 ? 1 : 2;
-       if ($number) {
-         $add_plural = (($counter = count($string)) && $number > 9) ? 's' : null;
-         $amt_hundred = ($counter == 1 && $string[0]) ? ' and ' : null;
-         $string [] = ($number < 21) ? $change_words[$number].' '. $here_digits[$counter]. $add_plural.' 
-         '.$amt_hundred:$change_words[floor($number / 10) * 10].' '.$change_words[$number % 10]. ' 
-         '.$here_digits[$counter].$add_plural.' '.$amt_hundred;
-         }else $string[] = null;
-       }
-   $implode_to_Rupees = implode('', array_reverse($string));
-   $get_paise = ($amount_after_decimal > 0) ? "And " . ($change_words[$amount_after_decimal / 10] . " 
-   " . $change_words[$amount_after_decimal % 10]) . ' Cent' : '';
-   return ($implode_to_Rupees ? $implode_to_Rupees . 'Euros ' : '') . $get_paise;
-    }
+function convertNumberToWords($number,$currency){
+   $no = (int)floor($number);
+   $point = (int)round(($number - $no) * 100);
+   $hundred = null;
+   $digits_1 = strlen($no);
+   $i = 0;
+   $str = array();
+   $words = array('0' => '', '1' => 'One', '2' => 'Two',
+    '3' => 'Three', '4' => 'Four', '5' => 'Five', '6' => 'Six',
+    '7' => 'Seven', '8' => 'Eight', '9' => 'Nine',
+    '10' => 'Ten', '11' => 'Eleven', '12' => 'Twelve',
+    '13' => 'Thirteen', '14' => 'Fourteen',
+    '15' => 'Fifteen', '16' => 'Sixteen', '17' => 'Seventeen',
+    '18' => 'Eighteen', '19' =>'Nineteen', '20' => 'Twenty',
+    '30' => 'Thirty', '40' => 'Forty', '50' => 'Fifty',
+    '60' => 'Sixty', '70' => 'Seventy',
+    '80' => 'Eighty', '90' => 'Ninety');
+   $digits = array('', 'Hundred', 'Thousand', 'Lakh', 'Crore');
+   while ($i < $digits_1) {
+     $divider = ($i == 2) ? 10 : 100;
+     $number = floor($no % $divider);
+     $no = floor($no / $divider);
+     $i += ($divider == 10) ? 1 : 2;
+
+
+     if ($number) {
+        $plural = (($counter = count($str)) && $number > 9) ? 's' : null;
+        $hundred = ($counter == 1 && $str[0]) ? ' and ' : null;
+        $str [] = ($number < 21) ? $words[$number] .
+            " " . $digits[$counter] . $plural . " " . $hundred
+            :
+            $words[floor($number / 10) * 10]
+            . " " . $words[$number % 10] . " "
+            . $digits[$counter] . $plural . " " . $hundred;
+     } else $str[] = null;
+  }
+  $str = array_reverse($str);
+  $result = implode('', $str);
+
+
+  if ($point > 20) {
+    $points = ($point) ?
+      "" . $words[floor($point / 10) * 10] . " " . 
+          $words[$point = $point % 10] : ''; 
+  } else {
+      $points = $words[$point];
+  }
+  if($points != ''){        
+      echo $result . $currency ." And " . $points . " Cent Only";
+  } else {
+
+      echo $result . $currency." Only";
+  }
+
+}

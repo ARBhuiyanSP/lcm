@@ -152,7 +152,7 @@ label{
 										if (isset($item_details) && !empty($item_details)) {
 											foreach ($item_details as $item) {
 										?>
-									<option value="<?php echo $item['currency_name']; ?>"><?php echo $item['currency_name']; ?> - <?php echo $item['currency_icon']; ?></option>
+									<option value="<?php echo $item['id']; ?>"><?php echo $item['currency_name']; ?> - <?php echo $item['currency_icon']; ?></option>
 										<?php }} ?>
 								  </select>
 								</div>

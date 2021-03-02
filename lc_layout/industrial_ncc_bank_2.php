@@ -105,16 +105,19 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<p><span style="width:3%;">I/We</span>  <input value="Saif Powertec Ltd" style="width:97%;"></br>
+				<p><span style="width:3%;">I/We</span>  <input value="<?php echo $row['openers_name']; ?> , <?php echo $row['openers_address']; ?>" style="width:97%;"></br>
 				<small style="padding-left:400px;">(Name and Full Address of openers)</small></br>
 				 <input value="" style="width:100%;"></input></br>
 				 <input value="" style="width:100%;"></input></br>
 				 hereby request you establish by Air mail/Cable on my/our behalf a confirmed irrevocable letter of Credit without recourse infavour of </br>
-				 <span style="width:2%;">M/S</span>  <input value="Saif Powertec Ltd" style="width:97%;"></input></br>
+				 <span style="width:2%;">M/S</span>  <input value="<?php echo $row['beneficiary_name']; ?>, <?php echo $row['beneficiary_address']; ?>" style="width:97%;"></input></br>
 				<small style="padding-left:400px;">(Name and Full Address of beneficiary)</small></br>
 				 <input value="" style="width:100%;"></input></br>
 				and instruct your foreign Correspondents to negotiate the drafts drawn on us at <input value="" style="width:40%;"></input> sight without
-				recourse to them to the extent of <input value="" style="width:30%;"> Equivalent Tk. <input value="" style="width:41%;"> </br>
+				recourse to them to the extent of <input value="<?php 
+										$dataresult =   getDataRowByTableAndId('currency', $row['currency']);
+										$currency = (isset($dataresult) && !empty($dataresult) ? $dataresult->currency_name : '');
+										echo $row['lc_amount'] .' '. $currency ; ?>" style="width:30%;"> Equivalent Tk. <input value="" style="width:41%;"> </br>
 				for full Invoice value of shipment(s) purporting to be <input value="" style="width:69%;"></input></br>
 				<input value="" style="width:100%;"></input></br>
 				<small style="padding-left:400px;">(Nature of goods quantity, if necessary)</small></br>
