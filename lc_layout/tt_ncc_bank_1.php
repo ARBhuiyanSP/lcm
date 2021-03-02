@@ -141,12 +141,20 @@
 		
 		<!-- Print LC Amount -->
 		<?php if(isset($row['lc_amount']) && !empty($row['lc_amount'])){ ?>
-		<div class="commonDataStyle" id="printLcAmount"> $ <?php echo $row['lc_amount']; ?></div>
+										<?php 
+										$dataresult =   getDataRowByTableAndId('currency', $row['currency']);
+										$currency_icon = (isset($dataresult) && !empty($dataresult) ? $dataresult->currency_icon : '');
+										?>
+		<div class="commonDataStyle" id="printLcAmount"><?php echo $currency_icon .' '. $row['lc_amount']; ?></div>
 		<?php } ?>
 		
 		<!-- Print LC Amount in Words -->
 		<?php if(isset($row['lc_amount']) && !empty($row['lc_amount'])){ ?>
-		<div class="commonDataStyle" id="printLcAmountinWords"><?php echo convertNumberToWords($row['lc_amount']).' Only';?></div>
+										<?php 
+										$dataresult =   getDataRowByTableAndId('currency', $row['currency']);
+										$currency = (isset($dataresult) && !empty($dataresult) ? $dataresult->currency_name : '');
+										?>
+		<div class="commonDataStyle" id="printLcAmountinWords"><?php echo convertNumberToWords($row['lc_amount'],$currency);?></div>
 		<?php } ?>
 		
 		<!-- Print Description items to be imported -->
