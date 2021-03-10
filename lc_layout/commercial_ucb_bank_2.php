@@ -109,9 +109,9 @@
                     <tr>
 										<?php 
 										$dataresult =   getDataRowByTableAndId('currency', $row['currency']);
-										$currency = (isset($dataresult) && !empty($dataresult) ? $dataresult->currency_name : '');
+										$currency_icon = (isset($dataresult) && !empty($dataresult) ? $dataresult->currency_icon : '');
 										?>
-						<td width="15%"><span>Draft Amount</span></br><span class="fontSize16"><?php echo $row['draft_amount'] .' '. $currency ; ?></span></td>
+						<td width="15%"><span>Draft Amount</span></br><span class="fontSize16"><?php echo $currency_icon .' '. $row['draft_amount']; ?></span></td>
 						<td width="25%"><span>In Words</span></br><span class="fontSize16"> <?php echo convertNumberToWords($row['draft_amount'],$currency);?></span></td>
 						<td width="11%">
 							<p>

@@ -46,7 +46,7 @@ $row = mysqli_fetch_array($result);
         <!-- Info boxes -->
         <div class="row">
 			<div class="col-md-12">
-				<div class="card">
+				<div class="card" style="border:2px solid #17A2B8;">
 					<div class="card-header">
 						<h3 class="card-title">LC Commercial Data Edit- </h3>
 						<button type="button" class="btn btn-info btn-xs" onclick="window.location.href='lc_commercial_list.php';">  <i class="nav-icon fas fa-bars"></i> LC List</button>
@@ -80,7 +80,7 @@ $row = mysqli_fetch_array($result);
 								<!-- /.form-group -->
 							</div>
 							<!-- /.col -->
-							<div class="col-md-2">
+							<div class="col-md-1">
 								<div class="form-group">
 								  <label>LCAF No</label>
 								  <input class="form-control" type="text" name="lcaf_no" value="<?php echo $row['lcaf_no']; ?>"/>
@@ -96,7 +96,7 @@ $row = mysqli_fetch_array($result);
 								<!-- /.form-group -->
 							</div>
 							<!-- /.col -->
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<div class="form-group">
 								  <label>Importer Address</label>
 								  <input class="form-control" type="text" name="address" value="<?php echo $row['address']; ?>"/>
@@ -106,16 +106,16 @@ $row = mysqli_fetch_array($result);
 							<!-- /.col -->
 							<div class="col-md-2">
 								<div class="form-group">
-								  <label>IRC No</label>
-								  <input class="form-control" type="text" name="irc_no" value="<?php echo $row['irc_no']; ?>"/>
+								  <label>Renewal Year</label>
+								  <input class="form-control" type="text" name="year_of_renewal" value="<?php echo $row['year_of_renewal']; ?>"/>
 								</div>
 								<!-- /.form-group -->
 							</div>
 							<!-- /.col -->
 							<div class="col-md-2">
 								<div class="form-group">
-								  <label>Renewal Year</label>
-								  <input class="form-control" type="text" name="year_of_renewal" value="<?php echo $row['year_of_renewal']; ?>"/>
+								  <label>IRC No</label>
+								  <input class="form-control" type="text" name="irc_no" value="<?php echo $row['irc_no']; ?>"/>
 								</div>
 								<!-- /.form-group -->
 							</div>
@@ -153,6 +153,22 @@ $row = mysqli_fetch_array($result);
 									</div>
 								</div>
 								<!-- /.form-group -->
+							</div>
+							<!-- /.col -->
+							<div class="col-md-2">
+								<div class="form-group">
+								  <label>Currency</label>
+								  <select class="form-control select2"t name="currency" style="width: 100%;">
+										<?php 
+										$currency = $row['currency'];
+										$item_details = getTableDataByTableName('currency', '', 'id');
+										if (isset($item_details) && !empty($item_details)) {
+											foreach ($item_details as $item) {
+										?>
+									<option value="<?php echo $item['id']; ?>"<?php if ($currency == $item['id']){ echo 'selected';} ?>><?php echo $item['currency_name']; ?> - <?php echo $item['currency_icon']; ?></option>
+										<?php }} ?>
+								  </select>
+								</div>
 							</div>
 							<!-- /.col -->
 							<div class="col-md-2">

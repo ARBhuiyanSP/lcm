@@ -117,8 +117,8 @@
 				and instruct your foreign Correspondents to negotiate the drafts drawn on us at <input value="" style="width:40%;"></input> sight without
 				recourse to them to the extent of <input value="<?php 
 										$dataresult =   getDataRowByTableAndId('currency', $row['currency']);
-										$currency = (isset($dataresult) && !empty($dataresult) ? $dataresult->currency_name : '');
-										echo $row['lc_amount'] .' '. $currency ; ?>" style="width:30%;"> Equivalent Tk. <input value="" style="width:41%;"> </br>
+										$currency_icon = (isset($dataresult) && !empty($dataresult) ? $dataresult->currency_icon : '');
+										echo $currency_icon .' '.$row['lc_amount']; ?>" style="width:30%;"> Equivalent Tk. <input value="" style="width:41%;"> </br>
 				for full Invoice value of shipment(s) purporting to be <input value="" style="width:69%;"></input></br>
 				<input value="" style="width:100%;"></input></br>
 				<small style="padding-left:400px;">(Nature of goods quantity, if necessary)</small></br>
